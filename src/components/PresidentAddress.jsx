@@ -39,11 +39,11 @@ export default function PresidentAddress() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 flex justify-center"
+            className="lg:col-span-5 relative"
           >
-            <div className="relative group">
+            <div className="relative w-full max-w-sm mx-auto group">
               <div className="absolute -inset-2.5 bg-gradient-to-br from-emerald-300/40 via-transparent to-amber-300/40 rounded-3xl blur-md group-hover:blur-lg transition-all" />
-              <div className="relative w-72 sm:w-80 lg:w-full max-w-sm aspect-[3/4] rounded-3xl overflow-hidden border-2 border-amber-400/50 bg-emerald-50 shadow-2xl shadow-emerald-900/10">
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border-2 border-amber-400/50 bg-emerald-50 shadow-2xl shadow-emerald-900/10">
                 {imgError ? (
                   <div className="w-full h-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center">
                     <div className="text-center text-white p-6">
