@@ -73,6 +73,14 @@ export default function PresidentAddress() {
                     Official Presidential Address &bull; 2026
                   </div>
                 </div>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-4 pt-14">
+                  <p className="text-white font-extrabold leading-tight">
+                    President Bola Ahmed Tinubu
+                  </p>
+                  <p className="text-amber-300 text-xs font-semibold">
+                    President, Federal Republic of Nigeria
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

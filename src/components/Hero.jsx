@@ -52,6 +52,9 @@ export default function Hero() {
         />
       </div>
 
+      {/* Green overlay background */}
+      <div className="absolute inset-0 bg-emerald-700/40 pointer-events-none" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-12 items-center gap-10 lg:gap-12">
           {/* Left Column — Typography & CTAs */}
@@ -73,7 +76,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-charcoal leading-[1.08] tracking-tight"
+              className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08] tracking-tight"
             >
               A New Direction for{" "}
               <span className="text-gradient-emerald">Prosperity, Security</span>{" "}
@@ -85,7 +88,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl"
+              className="text-lg lg:text-xl text-white/85 leading-relaxed max-w-xl"
             >
               Uniting citizens across all 36 States &amp; FCT to build an
               inclusive economy, empower youth, and modernize national
@@ -108,7 +111,7 @@ export default function Hero() {
               </a>
               <a
                 href="/manifesto"
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-base font-bold text-emerald-700 border-2 border-emerald-200 rounded-xl hover:bg-emerald-50 hover:border-emerald-300 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-base font-bold text-white border-2 border-white/40 rounded-xl backdrop-blur-sm hover:bg-white/15 hover:border-white/70 transition-all"
               >
                 <FileText className="w-5 h-5" />
                 Read 2026 Manifesto
@@ -131,8 +134,8 @@ export default function Hero() {
                   />
                 ))}
               </div>
-              <p className="text-sm text-gray-500">
-                Trusted by <span className="font-bold text-charcoal">5M+ citizens</span> across all 36 States + FCT
+              <p className="text-sm text-white/80">
+                Trusted by <span className="font-bold text-white">5M+ citizens</span> across all 36 States + FCT
               </p>
             </motion.div>
           </div>
