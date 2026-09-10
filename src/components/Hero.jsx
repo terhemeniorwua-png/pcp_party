@@ -53,14 +53,14 @@ export default function Hero() {
       </div>
 
       {/* Green overlay background */}
-      <div className="absolute inset-0 bg-emerald-700/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-emerald-700/35 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-12 items-center gap-10 lg:gap-12">
           {/* Left Column — Typography & CTAs */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 lg:space-y-8">
             {/* Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -69,7 +69,7 @@ export default function Hero() {
                 <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                 Official Platform &bull; 2026 Vision
               </span>
-            </motion.div>
+            </motion.div> */}
 
             {/* Headline */}
             <motion.h1
