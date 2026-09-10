@@ -22,17 +22,28 @@ const FIELDS = [
 export default function SocialLinksSettingsPage() {
   const { settings, updateSettings } = useContactSettings();
   const [form, setForm] = useState(settings);
+  const [prevSettings, setPrevSettings] = useState(settings);
+  const [dirty, setDirty] = useState(false);
   const [saved, setSaved] = useState(false);
+
+  // Adopt store values that arrive after mount (e.g. saved settings loaded
+  // from storage post-hydration) without clobbering the admin's own edits.
+  if (prevSettings !== settings && !dirty) {
+    setPrevSettings(settings);
+    setForm(settings);
+  }
 
   const handleChange = (key) => (e) => {
     const { value } = e.target;
     setForm((prev) => ({ ...prev, [key]: value }));
+    setDirty(true);
     setSaved(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     updateSettings(form);
+    setDirty(false);
     setSaved(true);
     window.setTimeout(() => setSaved(false), 2500);
   };

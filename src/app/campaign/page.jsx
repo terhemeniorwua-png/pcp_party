@@ -38,8 +38,6 @@ export default function CampaignPage() {
           {whatsappLink ? (
             <a
               href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center rounded-md border border-green-700 px-5 py-2.5 text-sm font-semibold text-green-700 hover:bg-green-700 hover:text-white transition-colors"
             >
               Chat on WhatsApp

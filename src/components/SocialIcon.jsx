@@ -72,13 +72,14 @@ export default function SocialIcon({ type, href, size = "md" }) {
   if (!entry) return null;
   const { Icon, label } = entry;
 
+  const isExternal = !["email", "whatsapp"].includes(type);
+
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       title={label}
-      className={`inline-flex items-center justify-center rounded-full bg-green-800 text-white hover:bg-green-700 transition-colors ${containerClass} ${paddingClass}`}
+      className={`inline-flex items-center justify-center rounded-full bg-emerald-50 text-emerald-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-emerald-600 hover:text-white border border-emerald-200 transition-all ${containerClass} ${paddingClass}`}
     >
       <Icon className={sizeClasses} />
     </a>
